@@ -1,4 +1,4 @@
-# GoIT Portfolio WordPress Theme
+# Portfolio WordPress Theme
 
 A learning project from the GoIT full-stack course: a WordPress theme built from the Figma design "Personal Portfolio Landing Page". This is a course project, not an original product — the base starter theme comes from the GoIT course repository, and the sections below describe what was built on top of it.
 
