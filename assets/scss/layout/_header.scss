@@ -1,0 +1,67 @@
+.site-header {
+  min-height: 84px;
+  background-color: #ffffff;
+
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: block;
+
+    img {
+      display: block;
+      width: 156px;
+      height: auto;
+    }
+  }
+
+  #header-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 35px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    //All links in the header menu
+    a {
+      font-family: "Poppins", sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.25;
+      text-align: center;
+      color: #6b7280;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: #312e81;
+      }
+    }
+
+    &.current-menu-item a {
+      font-weight: 500;
+      color: #312e81;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    .container {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    #header-menu {
+      justify-content: center;
+      gap: 8px 24px;
+    }
+  }
+}

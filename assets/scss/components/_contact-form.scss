@@ -1,0 +1,130 @@
+.cf-form {
+  --cf-bg: #ffffff;
+  --cf-border: #d9d9e3;
+  --cf-text: #1a1a2e;
+  --cf-accent: #5b5bd6;
+  --cf-accent-hover: #4747b8;
+  --cf-error: #d63638;
+
+  br {
+    display: none;
+  }
+
+  p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  max-width: 520px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  .cf-field label {
+    display: block;
+    margin: 0 0 15px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--cf-text);
+  }
+
+  .wpcf7-form-control-wrap {
+    display: block;
+  }
+
+  .cf-input {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 15px;
+    line-height: 1.4;
+    font: inherit;
+    color: var(--cf-text);
+    background: var(--cf-bg);
+    border: 1px solid var(--cf-border);
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition:
+      border-color 0.2s,
+      box-shadow 0.2s;
+
+    &:focus {
+      outline: none;
+      border-color: var(--cf-accent);
+      box-shadow: 0 0 0 3px rgba(91, 91, 214, 0.2);
+    }
+  }
+
+  textarea.cf-input {
+    height: 100px;
+    min-height: 100px;
+    resize: vertical;
+  }
+
+  .cf-consent {
+    .wpcf7-list-item {
+      margin: 0;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 400;
+    }
+  }
+
+  .cf-button {
+    padding: 10px 20px;
+    font: inherit;
+    font-weight: 600;
+    color: #fff;
+    background: var(--cf-accent);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+
+    &:hover {
+      background: var(--cf-accent-hover);
+    }
+  }
+
+  .wpcf7-not-valid-tip {
+    margin-top: 2px;
+    font-size: 13px;
+    line-height: 1.3;
+    color: var(--cf-error);
+  }
+
+  .wpcf7-not-valid {
+    border-color: var(--cf-error);
+  }
+
+  .wpcf7-spinner {
+    margin: 0 0 0 12px;
+  }
+}
+
+// Повідомлення після відправки (воно стоїть поза .cf-form, але в .wpcf7 form)
+.wpcf7 form .wpcf7-response-output {
+  margin: 20px 0 0;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border-width: 1px;
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+  border-color: #2e9e5b;
+  background: #eaf7ef;
+  color: #1e6b3d;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.failed .wpcf7-response-output {
+  border-color: #d63638;
+  background: #fdeeee;
+  color: #a02224;
+}

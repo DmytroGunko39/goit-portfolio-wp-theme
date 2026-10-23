@@ -1,0 +1,19 @@
+# Node dependencies (installed via npm install, at any depth)
+node_modules/
+
+# macOS Finder metadata
+.DS_Store
+
+# Log files
+*.log
+
+# Environment / secret files
+.env
+.env.*
+
+# Editor / IDE settings
+.vscode/
+.idea/
+
+# Source maps (not needed to run the theme, only for debugging a build)
+*.map

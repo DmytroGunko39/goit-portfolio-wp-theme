@@ -1,0 +1,60 @@
+<?php
+$show_hero = get_field('show_hero');
+
+if (!is_admin() && !$show_hero) {
+  return; // Exit if not in admin and show_hero is false 
+}
+
+$hero_title = get_field('hero_title') ?? 'Tittle here...';
+$hero_description = get_field('hero_description') ?? 'Description here...';
+$hero_buttons = get_field('hero_buttons');
+$first_cta = $hero_buttons['lets_talk'] ?? '';
+$second_cta = $hero_buttons['cta_portfolio'] ?? '';
+$hero_image = get_field('hero_image');
+
+?>
+
+
+
+<section id="home-hero" class="hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <?php if ($hero_title <> '') : ?>
+          <h1><?php echo $hero_title; ?></h1>
+        <?php endif; ?>
+
+        <?php if ($hero_description <> '') : ?>
+          <p><?php echo $hero_description; ?></p>
+        <?php endif; ?>
+
+        <?php if (!empty($first_cta['url'])) : ?>
+          <a href="<?php echo esc_url($first_cta['url']); ?>" class="btn btn--primary"><?php echo esc_html($first_cta['title']); ?>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 10H8.01M12 10H12.01M16 10H16.01M9 16H5C3.89543 16 3 15.1046 3 14V6C3 4.89543 3.89543 4 5 4H19C20.1046 4 21 4.89543 21 6V14C21 15.1046 20.1046 16 19 16H14L9 21V16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        <?php endif; ?>
+
+        <?php if (!empty($second_cta['url'])) : ?>
+          <a href="<?php echo esc_url($second_cta['url']); ?>" class="btn btn--secondary ms-4"><?php echo esc_html($second_cta['title']); ?>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M10.293 3.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L14.586 11H3a1 1 0 1 1 0-2h11.586l-4.293-4.293a1 1 0 0 1 0-1.414z" fill="#6b7280" />
+            </svg>
+          </a>
+        <?php endif; ?>
+
+      </div>
+      <div class="col-md-5">
+        <?php if ($hero_image): ?>
+          <img src="<?php echo esc_url($hero_image['url']); ?>"
+            alt="<?php echo esc_attr($hero_image['alt']); ?>" class="img-fluid">
+        <?php else: ?>
+          <svg class="hero__shape" width="373" height="420" viewBox="0 0 373 420" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#D9D9D9" d="M169 4.7c10.8-6.3 24.2-6.3 35 0l151.4 87.4c10.8 6.3 17.5 17.8 17.5 30.3v174.9c0 12.5-6.7 24.1-17.5 30.3L204 415c-10.8 6.3-24.2 6.3-35 0L17.5 327.6C6.7 321.3 0 309.8 0 297.3V122.4c0-12.5 6.7-24.1 17.5-30.3z" />
+          </svg>
+        <?php endif; ?>
+      </div>
+    </div>
+  </div>
+</section>

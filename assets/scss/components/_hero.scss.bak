@@ -1,0 +1,9 @@
+#home-hero {
+  // Preserves the previous .mt-5 spacing under the header (unchanged)
+  margin-top: 160px;
+
+  // Replaces .mb-5 (48px). Collapses with the next block's 0 top margin, then
+  // adds to the Skill Section's own 96px padding-top for a 160px total gap on
+  // desktop (64 + 96 = 160). Scales down on small screens instead of a flat 64px.
+  margin-bottom: clamp(32px, 6vw, 64px);
+}

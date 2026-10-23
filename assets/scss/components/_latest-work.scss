@@ -1,0 +1,57 @@
+.latest-work {
+  background: #fbfbfb;
+  padding: 50px 0;
+
+  &__header {
+    margin-bottom: 40px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center; // посилання по центру лінії заголовка
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  &__title {
+    margin: 0 0 20px;
+    line-height: 1.2;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 48px;
+    letter-spacing: -0.03em;
+    color: #242424;
+  }
+
+  &__description {
+    margin: 0;
+    font-size: 16px;
+    color: #6b7280;
+  }
+
+  &__link {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    color: #312e81;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+
+    @media (max-width: 991px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 575px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

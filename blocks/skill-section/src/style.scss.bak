@@ -1,0 +1,114 @@
+$block: "skill-section";
+
+.#{$block} {
+  // For frontend
+  &__title {
+    margin-bottom: 8px;
+    color: #202220;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    margin-top: unset;
+  }
+
+  &__description {
+    color: #6b7280;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+
+  &__block {
+    padding: 96px 0;
+
+    .#{$block}__skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+
+      > div {
+        width: calc(50% - 10px);
+        margin: unset;
+        border-radius: 15px;
+        border: 1px solid #dcdfe5;
+        background: #fff;
+        padding: 25px;
+      }
+
+      .wp-block-heading {
+        margin: unset;
+        color: #111827;
+      }
+
+      p {
+        margin: unset;
+        padding-left: 56px;
+        color: #6b7280;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+      }
+    }
+  }
+
+  // For admin panel
+  .wp-admin & {
+    padding: 20px;
+    background-color: #f5f5f5;
+    text-align: left;
+  }
+
+  // Editor
+  .block-editor-inner-blocks {
+    width: 100%;
+    margin-bottom: 60px;
+
+    > .block-editor-block-list__layout {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      > .wp-block-group {
+        width: calc(50% - 10px);
+        margin: unset;
+        border-radius: 15px;
+        border: 1px solid #dcdfe5;
+        background: #fff;
+        padding: 25px;
+
+        .wp-block {
+          margin: unset;
+        }
+      }
+
+      .wp-block-heading {
+        margin: unset;
+        color: #111827;
+
+        &h5,
+        &h6 {
+          font-size: 18px;
+          line-height: 24px;
+          font-style: normal;
+          font-weight: 500;
+        }
+      }
+
+      p {
+        margin: unset;
+        padding-left: 55px;
+      }
+
+      // Button
+      .block-list-appender {
+        bottom: -60px;
+      }
+    }
+  }
+}

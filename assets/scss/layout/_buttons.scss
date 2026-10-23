@@ -1,0 +1,49 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 17px 36px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+
+  svg {
+    flex: none;
+
+    path {
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  &--primary {
+    background-color: $primary-color;
+    color: $white;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  &--secondary {
+    background-color: $light;
+    color: $gray-color;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $white;
+    }
+  }
+
+  &--white {
+    background-color: $white;
+    color: $primary-color;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}

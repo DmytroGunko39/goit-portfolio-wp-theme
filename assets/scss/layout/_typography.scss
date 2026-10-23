@@ -1,0 +1,52 @@
+* {
+  font-family: $font-family;
+}
+h1 {
+  color: $dark;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 76px;
+  font-style: normal;
+}
+h2 {
+  color: $dark;
+  font-size: 48px;
+  font-style: normal;
+  line-height: 64px;
+  font-weight: 800;
+}
+h3 {
+  color: $dark;
+  font-size: 40px;
+  font-style: normal;
+  line-height: 56px;
+  font-weight: 800;
+}
+h4 {
+  color: $dark;
+  font-size: 24px;
+  font-style: normal;
+  line-height: 32px;
+  font-weight: 800;
+}
+h5 {
+  color: $dark;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 28px;
+  font-weight: 800;
+}
+h6 {
+  color: $dark;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 32px;
+  font-weight: 800;
+}
+p {
+  color: $gray-color;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 36px;
+  font-weight: 400;
+}

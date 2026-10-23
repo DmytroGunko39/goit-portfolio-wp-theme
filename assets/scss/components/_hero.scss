@@ -1,0 +1,16 @@
+#home-hero {
+  // Preserves the previous .mt-5 spacing under the header (unchanged)
+  margin-top: 54px;
+
+  // Owns the full hero -> Skill Section gap. The block's own vertical padding
+  // is dead (overridden by .container, confirmed via computed styles), so this
+  // margin alone must equal the desired gap: 160px from ~1333px width up
+  // (160px at the 1440px Figma reference width); floors at 64px on narrow screens.
+  margin-bottom: clamp(64px, 12vw, 160px);
+}
+
+.hero__shape {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
