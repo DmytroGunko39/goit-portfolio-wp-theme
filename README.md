@@ -65,4 +65,9 @@ The repository already includes the compiled output (`assets/scss/app.min.css` a
 
 ## Screenshots
 
-_Placeholder — screenshots will be added here._
+![Hero section](screenshots/hero.png)
+![Skills section](screenshots/skills.png)
+![Latest work](screenshots/latest-work.png)
+![CTA and footer](screenshots/footer.png)
+<img src="screenshots/mobile.png" alt="Mobile version" width="300">
+![Footer settings in the admin (ACF Options Page)](screenshots/admin-footer-settings.png)dded here.\_
